@@ -5,7 +5,7 @@
 import React from 'react'
 type grid = {
  name : string, // defining name prop 
- message : number, // defining message prop passed
+ message? : number, // defining message prop passed
 }
 
 export default function Great({name, message}:grid) {
