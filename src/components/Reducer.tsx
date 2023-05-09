@@ -1,34 +1,34 @@
+ 
 import React, { useReducer } from 'react'
 
-type checkings = {
-	count: number
-}
-type checkingsAction = {
-	type:string,
-	payload: number
-}
-const initial = {count : 0}
-function reducer (state : checkings, action:checkingsAction){
+ type initial ={
+	count : number
+ }
+
+ type initialAction ={
+	type : string,
+	payload : number
+ }
+const initialState = {count : 10}
+ function reducer(state:initial, action:initialAction){
    switch (action.type) {
-		case 'increment':
-			return  {count: state.count + action.payload};
-			case 'decrement':
-				return  {count: state.count - action.payload}
+		case 'Increment':
+			return {count: state.count + action.payload};
+			case 'Decrement':
+				return {count: state.count - action.payload};
 		default:
 			return state;
 	 }
-}
-
+ }
+ 
 export default function Reducer() {
-	const [state, dispatch] = useReducer(reducer,initial)
+	const [state, dispatch] =  useReducer(reducer, initialState)
 	return (
-		<>
-		Count: {state.count}
-		<button onClick={() => dispatch({type: 'increment', payload : 10})}/>
-		<button onClick={() => dispatch({type: 'decrement', payload : 1})}/>
+		<div>
+			Counter:{state.count}
+       <button onClick={()=>dispatch({type:"increment", payload:2})}>add</button>
+       <button onClick={()=>dispatch({type:"decrement", payload:2})}>add</button>
 
-
-		</>
-		 
+		</div>
 	)
 }

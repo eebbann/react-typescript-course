@@ -7,7 +7,10 @@ import Oscar from "./components/Oscar";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
-
+import Reducer from "./components/Reducer";
+import Box from "./components/context/Box";
+import {  ThemeContextProvider } from "./components/context/ThemeContext";
+ 
 function App() {
 	const persinalData = {
 		firstName: "emmanauel",
@@ -25,8 +28,14 @@ function App() {
 			<Button handleClick={(event, id)=>{
 				console.log('clicked', event, id);
 			}}/>
+			
 			 <Input value=" " handleChange={event => console.log('clicked', event)}/> 
-			 <Container style={{border: '1px solid', padding:'1em'}}/>
+			 <Container style={{border: '4px solid green', margin:'3em'}}/>
+			<Reducer/>
+			<ThemeContextProvider>
+					<Box/>
+			</ThemeContextProvider>
+		
 		</div>
 	);
 }
