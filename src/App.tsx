@@ -10,6 +10,7 @@ import Container from "./components/Container";
 import Reducer from "./components/Reducer";
 import Box from "./components/context/Box";
 import {  ThemeContextProvider } from "./components/context/ThemeContext";
+import Restriction from "./components/Restriction";
  
 function App() {
 	const persinalData = {
@@ -35,6 +36,7 @@ function App() {
 			<ThemeContextProvider>
 					<Box/>
 			</ThemeContextProvider>
+			<Restriction value={9} positive />
 		
 		</div>
 	);
