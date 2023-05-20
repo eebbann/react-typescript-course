@@ -8,9 +8,10 @@ import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
 import Reducer from "./components/Reducer";
-import Box from "./components/context/Box";
+// import Box from "./components/context/Box";
 import {  ThemeContextProvider } from "./components/context/ThemeContext";
 import Restriction from "./components/Restriction";
+import Text from "./components/polymorphic/Text";
  
 function App() {
 	const persinalData = {
@@ -34,8 +35,17 @@ function App() {
 			 <Container style={{border: '4px solid green', margin:'3em'}}/>
 			<Reducer/>
 			<ThemeContextProvider>
-					<Box/>
+					{/* <Box/> */}
+
 			</ThemeContextProvider>
+			<Text as="h1" size="md"/>
+			<Text as="h2" size="md"/>
+			<Text as="h3" size="md"/>
+			<Text as="h4" size="md"/>
+			<Text as="h5" size="md"/>
+
+			
+			<Text as="p" size="lg"/>
 			<Restriction value={9} positive />
 		
 		</div>

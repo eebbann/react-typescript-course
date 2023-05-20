@@ -6,6 +6,6 @@ export default function box() {
 	return (
 		<div
 		style={{background: theme.primary.main}}
-		>box</div>
+		> </div>
 	)
 }
